@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/GD Browser/build/_deps/tuliphook-subbuild/CMakeFiles/tuliphook-populate.dir
+C:/Users/User/Desktop/GD Browser/build/_deps/tuliphook-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/GD Browser/build/_deps/tuliphook-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,116 @@
+{
+    "geode": "5.4.1",
+    "gd": {
+        "win": "2.2081",
+        "android": "2.2081",
+        "mac": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "user.gd-browser",
+    "name": "GD Browser",
+    "version": "v0.1.0",
+    "developer": "User",
+    "description": "Multiplatform browser shell for Geometry Dash with session restore, favorites, downloads, uploads, safe mode, and native-backend scaffolding.",
+    "tags": [
+        "interface",
+        "utility",
+        "online"
+    ],
+    "dependencies": {
+        "geode.node-ids": {
+            "version": ">=v1.20.0",
+            "importance": "required"
+        }
+    },
+    "settings": {
+        "general-header": {
+            "type": "title",
+            "name": "General"
+        },
+        "auto-restore-session": {
+            "type": "bool",
+            "name": "Restore Session On Launch",
+            "description": "Reopen the last saved tabs the next time Geometry Dash starts.",
+            "default": true
+        },
+        "safe-mode": {
+            "type": "bool",
+            "name": "Safe Mode",
+            "description": "Skip tab restore and treat the next browser launch as a clean recovery.",
+            "default": false
+        },
+        "home-page": {
+            "type": "string",
+            "name": "Home Page",
+            "description": "URL opened for new tabs and the Home button.",
+            "default": "https://www.google.com"
+        },
+        "watchdog-seconds": {
+            "type": "int",
+            "name": "Watchdog Timeout (Seconds)",
+            "description": "If a page is still loading after this many seconds without backend activity, recreate the backend.",
+            "default": 15,
+            "min": 5,
+            "max": 60
+        },
+        "max-history-items": {
+            "type": "int",
+            "name": "History Limit",
+            "description": "Maximum amount of history entries persisted by the browser shell.",
+            "default": 50,
+            "min": 10,
+            "max": 500
+        },
+        "downloads-folder": {
+            "type": "folder",
+            "name": "Downloads Folder",
+            "description": "Folder used by the browser shell for downloads and uploads.",
+            "default": "{mod_save_dir}/downloads"
+        },
+        "permissions-header": {
+            "type": "title",
+            "name": "Permissions & Fallbacks"
+        },
+        "allow-external-links": {
+            "type": "bool",
+            "name": "Allow External Protocol Fallback",
+            "description": "When a scheme is unsupported in-game, offer to open it in the system browser.",
+            "default": true
+        },
+        "allow-file-access": {
+            "type": "bool",
+            "name": "Allow file:// Access",
+            "description": "Allow direct navigation to file:// URLs.",
+            "default": false
+        },
+        "allow-popups": {
+            "type": "bool",
+            "name": "Allow Popups",
+            "description": "Default decision for popup requests when the site has no remembered permission.",
+            "default": false
+        },
+        "clear-cache-on-watchdog": {
+            "type": "bool",
+            "name": "Clear Site Data On Recovery",
+            "description": "When the watchdog rebuilds the backend, also ask it to clear data for the active origin.",
+            "default": true
+        },
+        "show-debug-status": {
+            "type": "bool",
+            "name": "Show Scaffold Status",
+            "description": "Show backend diagnostics in the browser panel while the native bridge is still scaffolded.",
+            "default": true
+        },
+        "keybind-header": {
+            "type": "title",
+            "name": "Keybinds"
+        },
+        "open-browser-keybind": {
+            "type": "keybind",
+            "name": "Open Browser",
+            "default": "Ctrl+Shift+B",
+            "category": "global",
+            "priority": 1
+        }
+    }
+}
